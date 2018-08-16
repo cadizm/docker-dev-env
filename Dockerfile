@@ -16,9 +16,10 @@ RUN apt-get update && \
         && \
     rm -rf /var/lib/apt/lists/* && \
     localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8 && \
+    git clone https://github.com/cadizm/bin.git /home/dev/bin && \
     git clone https://github.com/cadizm/dotfiles.git /dotfiles && \
     pip install dotfiles && \
-    dotfiles --sync --force --home=/src --repo=/dotfiles
+    dotfiles --sync --force --home=/home/dev --repo=/dotfiles
 
 ENV LANG en_US.utf8
 
