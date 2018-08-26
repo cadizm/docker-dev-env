@@ -19,9 +19,3 @@ There are 2 intended use cases:
 2. `cd` to your development project
 3. Run the container: `docker run --rm -it --workdir /src --mount src=$(pwd),target=/src,type=bind cadizm/dev-env`
 4. Compile and run your project source
-
-
-#### TODO
-
-- Add googletest to image
-- Add google linters (e.g. cpp) to image

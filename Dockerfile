@@ -6,6 +6,7 @@ RUN apt-get update && \
         locales \
         coreutils \
         build-essential \
+        cmake \
         gdb bash-completion \
         manpages-dev \
         man-db \
@@ -22,6 +23,10 @@ RUN apt-get update && \
     dotfiles --sync --force --home=/home/dev --repo=/dotfiles
 
 ENV LANG en_US.utf8
+
+RUN git clone https://github.com/google/googletest.git /googletest && \
+    mkdir -p /googletest/build && cd /googletest/build && cmake /googletest && make && \
+    pip install cpplint
 
 RUN groupadd -r dev --gid=222 && useradd -r -g dev --uid=222 dev
 
