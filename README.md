@@ -9,7 +9,7 @@ There are 2 intended use cases:
 
 1. Pull the image: `$ docker pull cadizm/dev-env`
 2. Copy `docker-compose.yml` to your development project
-3. Run the container: `$ docker-compose run --rm --workdir=/src cadizm/dev-env`
+3. Run the container: `$ docker-compose run --rm --workdir=/src dev-env`
 4. Compile and run your project source
 
 
