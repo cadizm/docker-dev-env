@@ -31,6 +31,7 @@ RUN git clone https://github.com/google/googletest.git /googletest && \
     mkdir -p /googletest/build && cd /googletest/build && cmake /googletest && make && \
     pip install cpplint
 
-RUN groupadd -r dev --gid=222 && useradd -r -g dev --uid=222 dev
+RUN groupadd -r dev --gid=222 && useradd -r -g dev --uid=222 dev && \
+    chown -R dev:dev ~dev
 
 USER dev
