@@ -39,7 +39,7 @@ ENV LANG en_US.utf8
 
 ADD https://github.com/bazelbuild/bazel/releases/download/0.23.0/bazel_0.23.0-linux-x86_64.deb /tmp/
 
-RUN apt install /tmp/bazel_0.23.0-linux-x86_64.deb && \
+RUN apt install /tmp/bazel_0.23.0-linux-x86_64.deb && rm -f /tmp/bazel_0.23.0-linux-x86_64.deb && \
     git clone https://github.com/cadizm/bin.git /home/dev/bin && \
     git clone https://github.com/cadizm/dotfiles.git /dotfiles && \
     pip install dotfiles && \
