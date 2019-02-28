@@ -12,6 +12,7 @@ RUN apt-get update && \
         exuberant-ctags \
         gdb \
         git \
+        id-utils \
         locales \
         man-db \
         manpages-dev \
